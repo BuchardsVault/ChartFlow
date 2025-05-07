@@ -1,0 +1,21 @@
+// complex.cf – multiple reassignments & final error
+let p = ["AAPL", "MSFT"]
+show p last 5 days
+chart p last 5 days as line with title="AAPL & MSFT (5d)", sma=5
+
+let p = ["GOOG", "AMZN", "NFLX"]
+show p last 5 days
+chart p last 5 days as candlestick with sma=10
+
+clear p
+
+let p = ["TSLA"]
+show p last 3 days
+chart p last 3 days as ohlc
+
+let p = ["GE", "F"]
+show p in 2025
+
+// Intentionally trigger a runtime error on invalid symbol
+let p = ["INVALID"]
+show p last 1 day
