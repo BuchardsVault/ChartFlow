@@ -1,0 +1,75 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4346390112[ label="{Model|}"]
+
+4346642512[ label="{*Statement|}"]
+
+4346646992[ label="{ShowStmt|}"]
+
+4346432864[ label="{ChartStmt|charttype: ChartType\l}"]
+
+4346433472[ label="{Option|key: ID\l}"]
+
+4346205856[ label="{LetStmt|name: ID\l}"]
+
+4346210208[ label="{ClearStmt|vars: list[ID]\l}"]
+
+4346416464[ label="{AssetSpec|symbol: STRING\lsymbols: list[STRING]\lvar: ID\l}"]
+
+4346417232[ label="{DateClause|start: Date\lend: Date\lyear: INT\lamount: INT\lunit: TimeUnit\l}"]
+
+4345820608[ label="{*Expr|}"]
+
+4345834960[ label="{List|}"]
+
+4345835856[ label="{FunctionCall|name: ID\l}"]
+
+
+
+4346390112 -> 4346642512[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+4346642512 -> 4346646992 [dir=back]
+4346642512 -> 4346432864 [dir=back]
+4346642512 -> 4346205856 [dir=back]
+4346642512 -> 4346210208 [dir=back]
+4346646992 -> 4346416464[arrowtail=diamond, dir=both, headlabel="asset "]
+4346646992 -> 4346417232[arrowtail=diamond, dir=both, headlabel="date "]
+4346432864 -> 4346416464[arrowtail=diamond, dir=both, headlabel="asset "]
+4346432864 -> 4346417232[arrowtail=diamond, dir=both, headlabel="date "]
+4346432864 -> 4346433472[arrowtail=diamond, dir=both, headlabel="options 1..*"]
+4346433472 -> 4345820608[arrowtail=diamond, dir=both, headlabel="value "]
+4346205856 -> 4345820608[arrowtail=diamond, dir=both, headlabel="expr "]
+4345820608 -> 4345834960 [dir=back]
+4345820608 -> 4345835856 [dir=back]
+4345834960 -> 4345820608[arrowtail=diamond, dir=both, headlabel="elements 1..*"]
+4345835856 -> 4345820608[arrowtail=diamond, dir=both, headlabel="args 1..*"]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>ChartType</b></td><td>candlestick|line|bar|ohlc</td>
+	</tr>
+	<tr>
+		<td><b>Comment</b></td><td>\/\/.*$</td>
+	</tr>
+	<tr>
+		<td><b>Date</b></td><td>[0-9]{4}(-[0-9]{2}-[0-9]{2})?</td>
+	</tr>
+	<tr>
+		<td><b>Literal</b></td><td>STRING|INT|FLOAT</td>
+	</tr>
+	<tr>
+		<td><b>TimeUnit</b></td><td>day|days|week|weeks|month|months|year|years</td>
+	</tr>
+</table> >]
+
+
+}
