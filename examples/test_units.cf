@@ -1,0 +1,21 @@
+// test_units.cf
+
+// Start with two tickers, full‐year bar chart
+let stocks = ["AAPL","MSFT"]
+show stocks in 2024
+chart stocks in 2024 as line with title="2024 line View"
+
+//  Reassign to a new list, last‑10‑day candlesticks
+let stocks = ["GOOG","AMZN"]
+show stocks last 10 days
+
+chart stocks last 10 days as candlestick with title ="Last 10 Days", sma=5
+
+//  Explicit date window on a single ticker
+let stocks = ["NFLX"]
+show stocks from 2025-05-01 to 2025-05-05
+chart stocks from 2025-05-01 to 2025-05-05 as line
+
+// Clear and prove it’s gone
+clear stocks
+show stocks last 1 day    // should raise a ChartFlow error

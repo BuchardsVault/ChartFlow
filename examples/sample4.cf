@@ -1,0 +1,6 @@
+// sample4.cf – clear demo (drops variables)
+let tickers = ["SPY", "QQQ"]
+show tickers in 2024
+chart tickers in 2024 as bar
+clear tickers
+show tickers last 5 days    // CFError: 'tickers' undefined

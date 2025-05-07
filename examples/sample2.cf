@@ -1,0 +1,5 @@
+// sample2.cf – small portfolio, last‑week line chart
+let portfolio = ["AAPL", "MSFT", "GOOG"]
+show portfolio last 7 days
+chart portfolio last 7 days as line with title="Tech 7‑Day Trend"
+

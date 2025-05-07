@@ -1,0 +1,2 @@
+let portfolio = ["TSLA","NVDA"]
+chart portfolio in 2023 as line with title="2023 Performance"

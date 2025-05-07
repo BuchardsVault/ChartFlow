@@ -1,0 +1,10 @@
+
+let tech_stocks = ["AAPL", "MSFT", "GOOGL"]
+let threshold = 150
+
+show tech_stocks from 2020-01-01 to 2023-01-01
+
+chart tech_stocks last 3 year as line with
+    sma=200,
+    theme=light,
+    title="Tech Stocks 3Y Performance"

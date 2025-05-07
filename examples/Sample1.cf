@@ -1,0 +1,4 @@
+// sample1.cf – single ticker, one‑year window
+let sym = "TSLA"
+show sym in 2023
+chart sym in 2023 as candlestick with sma=20
