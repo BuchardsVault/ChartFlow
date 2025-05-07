@@ -1,0 +1,19 @@
+[project]
+name = "chartflow"            # recommended naming
+version = "0.1.1"
+description = "ChartFlow DSL for finance charting"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "textX",
+  "matplotlib",
+  "mplfinance",
+  "pandas",
+  "yfinance",
+  "pandas-market-calendars",
+  "python-dateutil",
+  "tabulate"
+]
+
+[project.entry-points."textx_languages"]
+chartflow = "chartflow:chartflow_metamodel"

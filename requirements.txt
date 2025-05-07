@@ -1,0 +1,23 @@
+# Core DSL & parsing
+textx>=3.1.2
+
+# Data fetching & calendars
+yfinance>=0.2.20
+pandas-market-calendars>=4.1.1
+
+# Data processing
+pandas>=2.0.3
+python-dateutil>=2.8.2
+numpy>=1.25.2
+
+# Rendering & plotting
+matplotlib>=3.7.1
+mplfinance>=0.12.11b0
+tabulate>=0.9.0
+
+# Utilities (if used)
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Specify Python version if desired
+# python_version >= "3.9"
