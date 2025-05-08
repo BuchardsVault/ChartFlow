@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChartFlow – Stock‑Data DSL</title>
+  <style>
+    /* -------- Base styles -------- */
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#222;line-height:1.6}
+    h1,h2{margin:0 0 .5em;font-weight:600}
+    a{color:#ff9900;text-decoration:none}
+    ul{padding-left:20px}
+
+    /* -------- Header -------- */
+    header{background:#111;color:#fff;text-align:center;padding:80px 20px 40px;position:relative}
+    header .tagline{margin:0 0 30px;font-size:1.25rem;opacity:.8}
+    .hero-btn{background:#ff9900;border:none;padding:16px 32px;color:#fff;font-size:1rem;border-radius:8px;cursor:pointer;transition:background .2s}
+    .hero-btn:hover{background:#e68a00}
+
+    /* -------- Navigation -------- */
+    nav ul{list-style:none;margin:40px 0 0;padding:0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    nav a{color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;transition:background .25s,opacity .25s}
+    nav a:hover{background:rgba(255,255,255,.1);opacity:.8}
+
+    /* -------- Sections -------- */
+    section{padding:80px 20px;max-width:1000px;margin:0 auto}
+    section:nth-of-type(even){background:#fff}
+
+    /* -------- Gallery -------- */
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .gallery-grid img{width:100%;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.1);transition:transform .25s}
+    .gallery-grid img:hover{transform:scale(1.03)}
+
+    /* -------- Footer -------- */
+    footer{background:#111;color:#aaa;text-align:center;padding:40px 20px;font-size:.9rem}
+    footer a{color:#ff9900}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChartFlow</h1>
+    <p class="tagline">A domain‑specific language for effortless stock‑data analysis &amp; visualization</p>
+    <button class="hero-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Explore</button>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About ChartFlow</h2>
+    <p>ChartFlow is a lightweight programming language built with <strong>TextX</strong> &amp; Python that lets analysts pull market data, run quick computations, and render professional‑looking charts in a couple of lines.</p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Intuitive syntax</strong> – <code>show "TSLA" from 2023‑01‑01 to 2023‑12‑31</code></li>
+      <li><strong>Multiple chart types</strong> – candlestick, line, bar, OHLC</li>
+      <li><strong>Variable binding</strong> &amp; <strong>expressions</strong> for quick calculations</li>
+      <li><strong>Extensible grammar</strong> written in TextX (see diagram below)</li>
+      <li><strong>Command‑line interpreter</strong> for instant feedback</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <a href="images/grammar-diagram.png" target="_blank"><img src="images/grammar-diagram.png" alt="ChartFlow grammar diagram"></a>
+      <a href="images/tsla-candlestick.png" target="_blank"><img src="images/tsla-candlestick.png" alt="TSLA candlestick chart"></a>
+      <a href="images/terminal-output.png" target="_blank"><img src="images/terminal-output.png" alt="Interpreter terminal output"></a>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2>Resources &amp; Downloads</h2>
+    <ul>
+      <li><a href="Green_Minimalist_Professional_Tech_Start-Up_Pitch_Deck_Presentation.pptx" download>Pitch‑deck presentation (PPTX)</a></li>
+      <li><a href="https://github.com/BuchardsVault/chartflow" target="_blank">Source code on GitHub</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Have feedback or want to contribute? <a href="mailto:buch@example.com">Send me an email</a>.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Buchard Joseph. Built with ❤️ &amp; <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+  </footer>
+</body>
+</html>
