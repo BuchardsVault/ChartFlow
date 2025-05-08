@@ -40,7 +40,7 @@
 <body>
   <header>
     <h1>ChartFlow</h1>
-    <p class="tagline">A domain‑specific language for effortless stock‑data analysis &amp; visualization</p>
+    <p class="tagline">Write one‑line scripts to fetch &amp; chart market data – no boilerplate, just insight.</p>
     <button class="hero-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Explore</button>
     <nav>
       <ul>
@@ -55,17 +55,18 @@
 
   <section id="about">
     <h2>About ChartFlow</h2>
-    <p>ChartFlow is a lightweight programming language built with <strong>TextX</strong> &amp; Python that lets analysts pull market data, run quick computations, and render professional‑looking charts in a couple of lines.</p>
+    <p>ChartFlow is a <em>declarative</em> mini‑language powered by <strong>TextX</strong> &amp; Python. Type plain‑English commands like <code>show "AAPL" from 2023‑01‑01 to 2023‑12‑31 as candlestick</code> and the interpreter fetches historical prices and renders publication‑ready charts or data tables – all in seconds and with zero Pandas boilerplate.</p>
   </section>
 
   <section id="features">
     <h2>Key Features</h2>
     <ul>
-      <li><strong>Intuitive syntax</strong> – <code>show "TSLA" from 2023‑01‑01 to 2023‑12‑31</code></li>
-      <li><strong>Multiple chart types</strong> – candlestick, line, bar, OHLC</li>
-      <li><strong>Variable binding</strong> &amp; <strong>expressions</strong> for quick calculations</li>
-      <li><strong>Extensible grammar</strong> written in TextX (see diagram below)</li>
-      <li><strong>Command‑line interpreter</strong> for instant feedback</li>
+      <li><strong>Sentence‑like syntax:</strong> Quickly describe <em>what</em> you want, not <em>how</em> to code it.</li>
+      <li><strong>Built‑in chart types:</strong> candlestick, line, bar, and OHLC out of the box.</li>
+      <li><strong>Lightweight options:</strong> Specify asset symbol, date range, and chart style in a single line.</li>
+      <li><strong>Instant CLI feedback:</strong> Run <code>python3 chartflow.py program.cf</code> and see tables or plots pop up immediately.</li>
+      <li><strong>Pure‑Python install:</strong> No C‑extensions; works on any machine with <code>pip install chartflow</code>.</li>
+      <li><strong>Extensible grammar:</strong> Modify the TextX file to add keywords or new statements in minutes.</li>
     </ul>
   </section>
 
